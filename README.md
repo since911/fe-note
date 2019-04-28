@@ -25,7 +25,7 @@
 * [web开发综合篇](#属性配置)
   * [跨域](#跨域方案)
   * [HTTP缓存](#HTTP缓存)
-  * [HTTPS理解](#HTTP缓存)
+  * [https理解](#https理解)
   * [CDN原理](#CDN原理)
   * [sso机制](#sso机制)
   * [什么是JWT](#什么是JWT)
@@ -37,8 +37,8 @@
   * [构建&打包优化](#构建&打包优化)
   * [loader和plugin原理](#loader和plugin原理)
 * [小程序](#小程序)
-  * [HTTP缓存](#HTTP缓存)
-  * [返回值说明](#返回值说明)
+  * [登录和认证](#登录和认证)
+  * [uniapp框架](#uniapp框架)
 * [git常用操作](#git常用操作)
   * [修改本地账户](#修改本地账户)
   * [常用命令](#常用命令)
@@ -50,15 +50,11 @@
 
 ## CSS篇
 ### 垂直居中
-> - 行内元素，单行使用line-height
-> - 箭头函数没有arguments对象,用rest解构参数（...params）代替
-> - 不可以使用yield命令，因此箭头函数不能用作 Generator 函数
-> - 普通函数this指向它的调用者,箭头函数this继承它的定义者（在哪个对象定义，就指向当前对象）
-> - 非严格模式下，没有找到直接调用者的函数，this指向window
-> - 严格模式下，没有直接调用者的函数，this为undefined
-> - call,apply,bind可以改变普通函数this指向
-## JS基础篇
+> - 行内元素，table-cell,flex 单行文本使用line-height
+> - 多行文本垂直居中 display:inline-block;vertical-align:middle;
+> - 块元素垂直居中，position + margin负值 ,position + translate3d ,flex
 
+## JS基础篇
 ### 箭头函数和普通函数的区别
 > - 箭头函数不可以被当作构造函数
 > - 箭头函数没有arguments对象,用rest解构参数（...params）代替
@@ -83,7 +79,7 @@ obj.fun2() // obj
 ### var let const 区别
 > - var存在变量提升，只有函数作用域
 > - let不存在变量提升，有块级作用域
-> - const指向当前变量的内存地址，声明时必须赋值，如果是值类型声明后不可修改，引用类型可修改当前对象的属性，但改变当前变量的内存地址（即不可重新赋值）
+> - const指向当前变量的内存地址，声明时必须赋值，如果是值类型声明后不可修改，引用类型可修改当前对象的属性，但不可改变当前变量的内存地址（即不可重新赋值）
 > - let和const不可以重复声明，存在暂时性死区（只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量）
 
 ### call apply bind
@@ -106,6 +102,8 @@ obj.fun2() // obj
 ## Vue框架篇
 
 ## web开发综合篇
+### https理解
+>- 111
 
 ## webpack
 
