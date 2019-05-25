@@ -54,6 +54,11 @@
 > - 多行文本垂直居中 display:inline-block;vertical-align:middle;
 > - 块元素垂直居中，position + margin负值 ,position + translate3d ,flex
 
+### 什么是BFC
+> - 块级格式化上下文(Block Fromatting Context)
+> - 清除浮动，实现流式布局，上下外边距折叠
+> - overflow: hidden;display:inline-block可触发BFC
+
 ## JS基础篇
 ### 箭头函数和普通函数的区别
 > - 箭头函数不可以被当作构造函数
@@ -96,11 +101,26 @@ obj.fun2() // obj
 
 
 ## Vue框架篇
+
 ### router和store如何注入到组件中的
 > - 通过Vue.mixin全局合并到beforeCreate和destory两个生命周期里
 > - 然后绑定在Vue.prototype.$router和Vue.prototype.$store上
 
 ## web开发综合篇
+### 性能优化
+> - html页面 css放在head标签里，js放在页面底部或者加async属性
+> - 减少HTTP请求数量（多个小图标用雪碧图，字体，base64代替）
+> - 公共基础数据存储在sessionStorage，避免每次刷新页面重新请求接口
+> - 压缩前端资源包大小（css,js,html,图片）
+> - 利用DNS负载均衡原理，前端静态资源走CDN
+> - 响应头开启gzip压缩，前端进行gzip预压缩
+> - 首页添加域名预解析标签，不会阻塞html页面的渲染
+> - HTTP缓存（强缓存，协商缓存）
+> - 图片懒加载，预加载
+> - 函数节流，防抖
+> - 减少页面的重排重绘，translate3d开启GPU加速
+> - 代码层面的优化，减少作用域链查找，少操作dom，利用事件冒泡，给父元素绑定事件
+> - performance工具分析性能瓶颈
 ### https理解
 >- 111
 
