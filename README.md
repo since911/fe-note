@@ -83,13 +83,9 @@ obj.fun2() // obj
 > - let和const不可以重复声明，存在暂时性死区（只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量）
 
 ### call apply bind
-> - 箭头函数不可以被当作构造函数
-> - 箭头函数没有arguments对象,用rest解构参数（...params）代替
-> - 不可以使用yield命令，因此箭头函数不能用作 Generator 函数
-> - 普通函数this指向它的调用者,箭头函数this继承它的定义者（在哪个对象定义，就指向当前对象）
-> - 非严格模式下，没有找到直接调用者的函数，this指向window
-> - 严格模式下，没有直接调用者的函数，this为undefined
-> - call,apply,bind可以改变普通函数this指向
+> - 这三个方法都可以改变this指向
+> - call和apply会立即执行，接受参数方式不一样，多用于继承
+> - bind返回一个新的函数
 
 
 ### 实现Promise
@@ -100,6 +96,9 @@ obj.fun2() // obj
 
 
 ## Vue框架篇
+### router和store如何注入到组件中的
+> - 通过Vue.mixin全局合并到beforeCreate和destory两个生命周期里
+> - 然后绑定在Vue.prototype.$router和Vue.prototype.$store上
 
 ## web开发综合篇
 ### https理解
