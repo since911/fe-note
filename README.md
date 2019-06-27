@@ -15,6 +15,7 @@
   * [async await原理](#async-await原理)
   * [Proxy和Object.defindproperty](#Proxy和Object.defindproperty)
 * [Vue框架篇](#快速入门)
+  * [vue开发规范](#vue开发规范)
   * [双向绑定原理](#双向绑定原理)
   * [vue-router原理](#vue-router原理)
   * [vuex原理](#vuex原理)
@@ -100,6 +101,13 @@ obj.fun2() // obj
 
 
 ## Vue框架篇
+### vue开发规范
+> - 组件名采用PascalCase方式命名，首字母大写
+> - 使用v-for，要加key，提高diff更新虚拟dom效率
+> - v-if和v-for不要写在同一个标签上，因为v-for的优先级比v-if高
+> - 使用v-if/v-else时需要加key
+> - scoped样式中，使用类选择器，不要使用元素选择器，影响查找元素效率
+> - 尽量prop和事件进行父子组件之间的通信，不要为了一时方便去使用this.$parent或改变prop，牺牲简洁性导致不易于理解
 
 ### router和store如何注入到组件中的
 > - 通过Vue.mixin全局合并到beforeCreate和destory两个生命周期里
